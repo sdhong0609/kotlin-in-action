@@ -1,7 +1,9 @@
 package ch06.ex3_2_ReadonlyAndMutableCollections
 
-fun <T> copyElements(source: Collection<T>,
-                     target: MutableCollection<T>) {
+fun <T> copyElements(
+    source: Collection<T>,
+    target: MutableCollection<T>
+) {
     for (item in source) {
         target.add(item)
     }

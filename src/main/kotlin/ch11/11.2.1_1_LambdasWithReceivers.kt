@@ -1,7 +1,7 @@
 package ch11.ex2_1_1_LambdasWithReceivers
 
 fun buildString(
-        builderAction: (StringBuilder) -> Unit
+    builderAction: (StringBuilder) -> Unit
 ): String {
     val sb = StringBuilder()
     builderAction(sb)

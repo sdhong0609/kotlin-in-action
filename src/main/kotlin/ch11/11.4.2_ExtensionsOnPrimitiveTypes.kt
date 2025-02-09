@@ -1,8 +1,7 @@
 package ch11.ex4_2_ExtensionsOnPrimitiveTypes
 
-import java.util.Date
-import java.time.Period
 import java.time.LocalDate
+import java.time.Period
 
 val Int.days: Period
     get() = Period.ofDays(this)

@@ -1,9 +1,7 @@
 package ch04.ex3_3_ClassDelegationUsingTheByKeyword
 
-import java.util.HashSet
-
 class CountingSet<T>(
-        val innerSet: MutableCollection<T> = HashSet<T>()
+    val innerSet: MutableCollection<T> = HashSet<T>()
 ) : MutableCollection<T> by innerSet {
 
     var objectsAdded = 0

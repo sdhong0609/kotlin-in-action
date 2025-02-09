@@ -1,7 +1,9 @@
 package ch09.CopyDataOut
 
-fun <T> copyData(source: MutableList<out T>,
-                 destination: MutableList<T>) {
+fun <T> copyData(
+    source: MutableList<out T>,
+    destination: MutableList<T>
+) {
     for (item in source) {
         destination.add(item)
     }

@@ -17,9 +17,11 @@ fun table(init: TABLE.() -> Unit) = TABLE().apply(init)
 class TABLE : Tag("table") {
     fun tr(init: TR.() -> Unit) = doInit(TR(), init)
 }
+
 class TR : Tag("tr") {
     fun td(init: TD.() -> Unit) = doInit(TD(), init)
 }
+
 class TD : Tag("td")
 
 fun createTable() =

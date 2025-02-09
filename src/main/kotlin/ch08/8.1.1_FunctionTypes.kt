@@ -1,8 +1,8 @@
 package ch08.ex1_1_FunctionTypes
 
 fun performRequest(
-       url: String,
-       callback: (code: Int, content: String) -> Unit
+    url: String,
+    callback: (code: Int, content: String) -> Unit
 ) {
     /*...*/
 }

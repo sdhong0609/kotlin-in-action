@@ -1,6 +1,7 @@
 package ch07.ex5_2_2_LazyInitialization1
 
 class Email { /*...*/ }
+
 fun loadEmails(person: Person): List<Email> {
     println("Load emails for ${person.name}")
     return listOf(/*...*/)

@@ -1,7 +1,9 @@
 package ch09.CopyDataAny
 
-fun <T: R, R> copyData(source: MutableList<T>,
-                       destination: MutableList<R>) {
+fun <T : R, R> copyData(
+    source: MutableList<T>,
+    destination: MutableList<R>
+) {
     for (item in source) {
         destination.add(item)
     }

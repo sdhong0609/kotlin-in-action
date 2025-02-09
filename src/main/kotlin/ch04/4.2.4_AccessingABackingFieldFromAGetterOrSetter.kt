@@ -3,9 +3,11 @@ package ch04.ex2_4_AccessingABackingFieldFromAGetterOrSetter
 class User(val name: String) {
     var address: String = "unspecified"
         set(value: String) {
-            println("""
+            println(
+                """
                 Address was changed for $name:
-                "$field" -> "$value".""".trimIndent())
+                "$field" -> "$value".""".trimIndent()
+            )
             field = value
         }
 }

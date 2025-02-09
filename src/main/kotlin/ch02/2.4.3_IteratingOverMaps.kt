@@ -1,6 +1,6 @@
 package ch02.ex4_3_IteratingOverMaps
 
-import java.util.TreeMap
+import java.util.*
 
 fun main(args: Array<String>) {
     val binaryReps = TreeMap<Char, String>()

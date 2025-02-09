@@ -5,6 +5,7 @@ fun getFacebookName(accountId: Int) = "fb:$accountId"
 interface User {
     val nickname: String
 }
+
 class PrivateUser(override val nickname: String) : User
 
 class SubscribingUser(val email: String) : User {

@@ -1,7 +1,6 @@
 package ch08;
 
-import static ch08.ProcessTheAnswer.ProcessTheAnswer.*;
-import kotlin.Unit;
+import static ch08.ProcessTheAnswer.ProcessTheAnswer.processTheAnswer;
 
 /* Java */
 

@@ -5,8 +5,7 @@ data class Issue(
     val priority: String, val description: String
 )
 
-class ImportantIssuesPredicate(val project: String)
-        : (Issue) -> Boolean {
+class ImportantIssuesPredicate(val project: String) : (Issue) -> Boolean {
 
     override fun invoke(issue: Issue): Boolean {
         return issue.project == project && issue.isImportant()
@@ -19,12 +18,16 @@ class ImportantIssuesPredicate(val project: String)
 }
 
 fun main(args: Array<String>) {
-    val i1 = Issue("IDEA-154446", "IDEA", "Bug", "Major",
-                   "Save settings failed")
-    val i2 = Issue("KT-12183", "Kotlin", "Feature", "Normal",
-    "Intention: convert several calls on the same receiver to with/apply")
+    val i1 = Issue(
+        "IDEA-154446", "IDEA", "Bug", "Major",
+        "Save settings failed"
+    )
+    val i2 = Issue(
+        "KT-12183", "Kotlin", "Feature", "Normal",
+        "Intention: convert several calls on the same receiver to with/apply"
+    )
     val predicate = ImportantIssuesPredicate("IDEA")
     for (issue in listOf(i1, i2).filter(predicate)) {
-         println(issue.id)
+        println(issue.id)
     }
 }

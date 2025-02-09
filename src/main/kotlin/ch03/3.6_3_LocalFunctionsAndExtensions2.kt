@@ -7,7 +7,8 @@ fun saveUser(user: User) {
         if (value.isEmpty()) {
             throw IllegalArgumentException(
                 "Can't save user ${user.id}: " +
-                    "empty $fieldName")
+                        "empty $fieldName"
+            )
         }
     }
 

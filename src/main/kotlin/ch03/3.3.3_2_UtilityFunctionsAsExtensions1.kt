@@ -1,9 +1,9 @@
 package ch03.ex3_3_2_UtilityFunctionsAsExtensions1
 
 fun <T> Collection<T>.joinToString(
-        separator: String = ", ",
-        prefix: String = "",
-        postfix: String = ""
+    separator: String = ", ",
+    prefix: String = "",
+    postfix: String = ""
 ): String {
     val result = StringBuilder(prefix)
 

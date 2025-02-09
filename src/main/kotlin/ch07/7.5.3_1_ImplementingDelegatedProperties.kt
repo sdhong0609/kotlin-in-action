@@ -1,7 +1,7 @@
 package ch07.ImplementingDelegatedProperties
 
-import java.beans.PropertyChangeSupport
 import java.beans.PropertyChangeListener
+import java.beans.PropertyChangeSupport
 
 open class PropertyChangeAware {
     protected val changeSupport = PropertyChangeSupport(this)
@@ -16,7 +16,7 @@ open class PropertyChangeAware {
 }
 
 class Person(
-        val name: String, age: Int, salary: Int
+    val name: String, age: Int, salary: Int
 ) : PropertyChangeAware() {
 
     var age: Int = age
@@ -24,7 +24,8 @@ class Person(
             val oldValue = field
             field = newValue
             changeSupport.firePropertyChange(
-                    "age", oldValue, newValue)
+                "age", oldValue, newValue
+            )
         }
 
     var salary: Int = salary
@@ -32,7 +33,8 @@ class Person(
             val oldValue = field
             field = newValue
             changeSupport.firePropertyChange(
-                    "salary", oldValue, newValue)
+                "salary", oldValue, newValue
+            )
         }
 }
 
@@ -40,8 +42,10 @@ fun main(args: Array<String>) {
     val p = Person("Dmitry", 34, 2000)
     p.addPropertyChangeListener(
         PropertyChangeListener { event ->
-            println("Property ${event.propertyName} changed " +
-                    "from ${event.oldValue} to ${event.newValue}")
+            println(
+                "Property ${event.propertyName} changed " +
+                        "from ${event.oldValue} to ${event.newValue}"
+            )
         }
     )
     p.age = 35

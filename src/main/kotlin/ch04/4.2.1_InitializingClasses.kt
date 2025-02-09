@@ -1,7 +1,9 @@
 package ch04.ex2_1_InitializingClasses
 
-class User(val nickname: String,
-           val isSubscribed: Boolean = true)
+class User(
+    val nickname: String,
+    val isSubscribed: Boolean = true
+)
 
 fun main(args: Array<String>) {
     val alice = User("Alice")

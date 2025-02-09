@@ -6,7 +6,8 @@ class DependencyHandler {
     }
 
     operator fun invoke(
-            body: DependencyHandler.() -> Unit) {
+        body: DependencyHandler.() -> Unit
+    ) {
         body()
     }
 }

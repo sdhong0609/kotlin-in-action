@@ -7,11 +7,9 @@ fun readNumber(reader: BufferedReader): Int? {
     try {
         val line = reader.readLine()
         return Integer.parseInt(line)
-    }
-    catch (e: NumberFormatException) {
+    } catch (e: NumberFormatException) {
         return null
-    }
-    finally {
+    } finally {
         reader.close()
     }
 }

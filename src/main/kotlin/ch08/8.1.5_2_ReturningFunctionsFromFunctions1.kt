@@ -1,9 +1,9 @@
 package ch08.ex1_5_2_ReturningFunctionsFromFunctions1
 
 data class Person(
-        val firstName: String,
-        val lastName: String,
-        val phoneNumber: String?
+    val firstName: String,
+    val lastName: String,
+    val phoneNumber: String?
 )
 
 class ContactListFilters {
@@ -17,19 +17,26 @@ class ContactListFilters {
         if (!onlyWithPhoneNumber) {
             return startsWithPrefix
         }
-        return { startsWithPrefix(it)
-                    && it.phoneNumber != null }
+        return {
+            startsWithPrefix(it)
+                    && it.phoneNumber != null
+        }
     }
 }
 
 fun main(args: Array<String>) {
-    val contacts = listOf(Person("Dmitry", "Jemerov", "123-4567"),
-                          Person("Svetlana", "Isakova", null))
+    val contacts = listOf(
+        Person("Dmitry", "Jemerov", "123-4567"),
+        Person("Svetlana", "Isakova", null)
+    )
     val contactListFilters = ContactListFilters()
-    with (contactListFilters) {
+    with(contactListFilters) {
         prefix = "Dm"
         onlyWithPhoneNumber = true
     }
-    println(contacts.filter(
-        contactListFilters.getPredicate()))
+    println(
+        contacts.filter(
+            contactListFilters.getPredicate()
+        )
+    )
 }

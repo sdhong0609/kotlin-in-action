@@ -1,9 +1,9 @@
 package ch03.JoinToStringFinal
 
 fun <T> Collection<T>.joinToString(
-        separator: String = ", ",
-        prefix: String = "",
-        postfix: String = ""
+    separator: String = ", ",
+    prefix: String = "",
+    postfix: String = ""
 ): String {
     val result = StringBuilder(prefix)
 
@@ -18,6 +18,10 @@ fun <T> Collection<T>.joinToString(
 
 fun main(args: Array<String>) {
     val list = listOf(1, 2, 3)
-    println(list.joinToString(separator = "; ",
-          prefix = "(", postfix = ")"))
+    println(
+        list.joinToString(
+            separator = "; ",
+            prefix = "(", postfix = ")"
+        )
+    )
 }

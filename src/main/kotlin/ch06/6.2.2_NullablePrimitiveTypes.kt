@@ -1,7 +1,9 @@
 package ch06.ex2_2_NullablePrimitiveTypes
 
-data class Person(val name: String,
-                  val age: Int? = null) {
+data class Person(
+    val name: String,
+    val age: Int? = null
+) {
 
     fun isOlderThan(other: Person): Boolean? {
         if (age == null || other.age == null)

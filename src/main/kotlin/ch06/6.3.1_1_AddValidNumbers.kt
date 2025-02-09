@@ -1,6 +1,5 @@
 package ch06.AddValidNumbers
 
-import java.util.ArrayList
 import java.io.BufferedReader
 import java.io.StringReader
 
@@ -10,8 +9,7 @@ fun readNumbers(reader: BufferedReader): List<Int?> {
         try {
             val number = line.toInt()
             result.add(number)
-        }
-        catch(e: NumberFormatException) {
+        } catch (e: NumberFormatException) {
             result.add(null)
         }
     }

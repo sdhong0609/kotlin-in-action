@@ -1,10 +1,9 @@
 package ch07.ex4_3_DestructuringDeclarations2
 
-import java.io.File
-
 data class NameComponents(
-        val name: String,
-        val extension: String)
+    val name: String,
+    val extension: String
+)
 
 fun splitFilename(fullName: String): NameComponents {
     val (name, extension) = fullName.split('.', limit = 2)
